@@ -1,0 +1,16 @@
+*
+!*/
+
+!.gitignore
+
+!lib/
+!include/
+!src/
+!Objects/
+
+!lib/*
+!include/*
+!src/*
+
+Objects/*
+!Objects/project.hex
