@@ -10,6 +10,7 @@ void GPIO_ADC_Init(void)
         右水平 P14
     */
     // init P06, P11, P14, P15 high
+    // 默认高阻输入，无需初始化
     EAXFR = 1;
 
     P0M1 &= 0x40;
