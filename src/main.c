@@ -1,5 +1,9 @@
 #include <STC32G.H>
 
-void main() {
-	while(1);
+void main()
+{
+	while(1)
+	{
+
+	}
 }
