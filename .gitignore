@@ -6,11 +6,11 @@
 !lib/
 !include/
 !src/
-!Objects/
+# !Objects/
 
 !lib/*
 !include/*
 !src/*
 
-Objects/*
-!Objects/project.hex
+# Objects/*
+# !Objects/project.hex
