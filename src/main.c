@@ -1,5 +1,5 @@
 #include <STC32G.H>
-#include "config.h"
+#include "define.h"
 
 void main()
 {
@@ -7,6 +7,6 @@ void main()
 	
 	while(1)
 	{
-
+		
 	}
 }
