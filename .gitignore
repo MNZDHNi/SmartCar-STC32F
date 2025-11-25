@@ -6,11 +6,13 @@
 !lib/
 !include/
 !src/
+!release/
 # !Objects/
 
 !lib/*
 !include/*
 !src/*
+!release/*
 
 # Objects/*
 # !Objects/project.hex

@@ -4,7 +4,7 @@
 void main()
 {
 	//init function
-	
+
 	while(1)
 	{
 		

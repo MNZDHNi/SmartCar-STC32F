@@ -39,8 +39,8 @@ void PWMB_Init()
 
     GPIO_Init();
 
-    PWMB_PSCRH = (unsigned char)(PWMB_PSCR >> 8);
-    PWMB_PSCRL = (unsigned char)(PWMB_PSCR);
+    // PWMB_PSCRH = (unsigned char)(PWMB_PSCR >> 8);
+    // PWMB_PSCRL = (unsigned char)(PWMB_PSCR);
 
     PWMB_CCER1 = 0x00; // 关闭通道
     // PWMB_CCER2 = 0x00;

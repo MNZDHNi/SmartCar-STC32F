@@ -32,16 +32,16 @@ void PWMA_Init(void)
     PWMA_PSCRH = (unsigned char)(PWMA_PSCR >> 8);
     PWMA_PSCRL = (unsigned char)(PWMA_PSCR);
 
-    PWMA_CCER1 = 0x00; // 关闭通道
+    // PWMA_CCER1 = 0x00; // 关闭通道
     PWMA_CCER2 = 0x00;
 
-    PWMA_CCMR1 |= 0xA1; // 边沿对齐模式 80滤波
-    PWMA_CCMR2 |= 0xA1;
+    // PWMA_CCMR1 |= 0xA1; // 边沿对齐模式 80滤波
+    // PWMA_CCMR2 |= 0xA1;
 
     PWMA_CCMR3 |= 0x60; // PWM1 置为 PWM 模式 1
     PWMA_CCMR4 |= 0x60; // PWM2 置为 PWM 模式 1
 
-    PWMA_CCER1 |= 0x55; // 使能 PWM1 和 PWM2 输入捕获
+    // PWMA_CCER1 |= 0x11; // 使能 PWM1 和 PWM2 输入捕获
     PWMA_CCER2 |= 0x11; // 使能 PWM1 和 PWM2 输出
 
     PWMA_CCR3H = (unsigned char)(duty_ch1 >> 8);
@@ -52,9 +52,9 @@ void PWMA_Init(void)
     PWMA_ARRH = (unsigned char)(pwm_period >> 8);
     PWMA_ARRL = (unsigned char)(pwm_period);
 
-    PWMA_SMCR = 0x03; // Encoder mode 3
-    PWMA_IER |= 0x02; // 使能中断
-    EA = 1; // 总中断使能
+    // PWMA_SMCR = 0x03; // Encoder mode 3
+    // PWMA_IER |= 0x02; // 使能中断
+    // EA = 1; // 总中断使能
 
     PWMA_ENO |= 0x50; // 使能 PWMA3P 和 PWMA4P
     PWMA_BKR |= 0x80; // 主输出使能
