@@ -4,4 +4,6 @@
 void PWMA_Init(void);
 void Set_PWM_Duty(unsigned char channel, unsigned int duty);
 
+void PWM_Init(void);
+
 #endif

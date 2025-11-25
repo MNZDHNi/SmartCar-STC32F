@@ -7,7 +7,7 @@
 extern int left_encoder;
 extern int right_encoder;
 
-void PWMB_Init();
-void Encoder_Handle();
+void PWMB_Init(void);
+void Encoder_Handle(unsigned char encoder, unsigned char cnt_H, unsigned char cnt_L);
 
 #endif
