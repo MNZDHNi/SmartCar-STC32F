@@ -19,6 +19,9 @@
 !Libraries/seekfree_libraries/*
 !Libraries/seekfree_peripheral/*
 
+!User/
+!User/*
+
 !main/
 !main/*
 
