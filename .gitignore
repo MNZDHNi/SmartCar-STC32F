@@ -3,16 +3,27 @@
 
 !.gitignore
 
-!lib/
-!include/
-!src/
-!release/
-# !Objects/
+!Lib/
+!Lib/*
+!Lib/include/*
+!Lib/src/*
 
-!lib/*
-!include/*
-!src/*
+!release/
 !release/*
 
+!Libraries/
+!libraries/*
+!Libraries/doc/*
+!Libraries/libraries/*
+!Libraries/seekfree_components/*
+!Libraries/seekfree_libraries/*
+!Libraries/seekfree_peripheral/*
+
+!main/
+!main/*
+
+# !Objects/
 # Objects/*
 # !Objects/project.hex
+
+*.DS_Store
