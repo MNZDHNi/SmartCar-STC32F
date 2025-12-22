@@ -2,13 +2,13 @@
 #define __U_PWM_H__
 
 typedef enum {
-    DIR_LEFT = 0,
-    DIR_RIGHT
+    PWM_DIR_LEFT = 0,
+    PWM_DIR_RIGHT
 } Direction_x;
 
 typedef enum {
-    DIR_FORWARD = 0,
-    DIR_BACKWARD
+    PWM_DIR_FORWARD = 0,
+    PWM_DIR_BACKWARD
 } Direction_y;
 
 void U_PWM_Init(void)

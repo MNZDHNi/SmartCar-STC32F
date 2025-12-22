@@ -2,11 +2,13 @@
 !*/
 
 !.gitignore
+!README.md
 
-!Lib/
-!Lib/*
-!Lib/include/*
-!Lib/src/*
+# !Lib/
+# !Lib/*
+# !Lib/Abyss_Watchers_Libraries/*
+# !Lib/include/*
+# !Lib/src/*
 
 !release/
 !release/*
@@ -19,8 +21,11 @@
 !Libraries/seekfree_libraries/*
 !Libraries/seekfree_peripheral/*
 
-!User/
-!User/*
+!User_Hardware/
+!User_Hardware/*
+
+!User_Software/
+!User_Software/*
 
 !main/
 !main/*
