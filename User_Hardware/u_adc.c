@@ -3,7 +3,7 @@
 #include "zf_adc.h"
 #include "zf_gpio.h"
 
-unsigned int adc_value[4];
+volatile unsigned int adc_value[4];
 
 void U_ADC_Init(void)
 {

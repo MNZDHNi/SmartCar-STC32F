@@ -1,15 +1,25 @@
 #include "headfile.h"
 
-#include "encoder.h"
+#include "u_encoder.h"
 
-// 定时器0中断服务程序
-void timer0_isr(void) interrupt 1
+// // 定时器中断服务程序
+// void timer0_isr(void) interrupt 1
+// {
+//     // 处理正向溢出
+// }
+
+// void timer3_isr(void) interrupt 19
+// {
+//     // 处理正向溢出
+// }
+
+// IO口中断服务程序
+void P3_ISR(void) interrupt 0
 {
-    u_encoder_isr_timer0();  // 处理右侧编码器
+    u_encoder_right_P3_isr();
 }
 
-// 定时器3中断服务程序
-void timer3_isr(void) interrupt 19
+void P5_ISR(void) interrupt 2
 {
-    u_encoder_isr_timer3();  // 处理左侧编码器
+    u_encoder_left_P5_isr();
 }
