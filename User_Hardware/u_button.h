@@ -9,6 +9,8 @@ typedef enum {
     BUTTON_4
 } BUTTON_ENUM;
 
-
+void u_button_Init(void);
+void u_button_scan(void);
+void u_button_state(void);
 
 #endif
