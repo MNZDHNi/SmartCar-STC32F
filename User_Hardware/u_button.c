@@ -13,7 +13,7 @@ void u_button_Init(void)
     gpio_mode(P5_1, GPI_IMPEDANCE);
 }
 
-unsigned char u_button_get_state(void)
+void u_button_get_state(void)
 {
     
 }

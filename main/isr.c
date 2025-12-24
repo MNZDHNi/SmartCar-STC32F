@@ -16,10 +16,10 @@
 // IO口中断服务程序
 void P3_ISR(void) interrupt 0
 {
-    u_encoder_right_P3_isr();
+    u_right_encoder_P3_isr();
 }
 
 void P5_ISR(void) interrupt 2
 {
-    u_encoder_left_P5_isr();
+    u_left_encoder_P5_isr();
 }

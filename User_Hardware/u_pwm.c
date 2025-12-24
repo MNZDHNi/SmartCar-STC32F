@@ -15,7 +15,7 @@ void U_PWM_Init(void)
     P13 = 0;
 }
 
-void U_PWM_SetDuty(unsigned long duty0, unsigned long duty1)
+void U_PWM_SetDuty(unsigned int duty0, unsigned int duty1)
 {
     if(duty0 <= 10000 && duty1 <= 10000) // 占空比范围0~10000，对应0%~100%
     {
@@ -26,11 +26,11 @@ void U_PWM_SetDuty(unsigned long duty0, unsigned long duty1)
 
 void U_Change_Dir(Direction_x x, Direction_y y)
 {
-    if (x == DIR_LEFT)
+    if (x == PWM_DIR_LEFT)
     {
         P10 = y;
     }
-    else if(x == DIR_RIGHT) 
+    else if(x == PWM_DIR_RIGHT) 
     {
         P13 = y;
     }
