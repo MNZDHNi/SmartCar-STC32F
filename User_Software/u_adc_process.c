@@ -1,13 +1,43 @@
 #include "u_adc_process.h"
 
-#include "u_adc.h"
-
-float u_adc_process(int* p)
+void u_adc_filter(int* adc_value, int* adc_value_filter)
 {
-    float diff = (float)(p[1] - p[2]);
-    float sum = (float)(p[1] + p[2]);
-    float v_diff = (float)(p[0] - p[3]);
-    float v_sum = (float)(p[0] + p[3]);
+    int i, j;
+    unsigned int max_value = 0;
+    unsigned int min_value = 4096;
+    for(i = 0; i < 4; i++)
+    {
+        for(j = 0; j < 5; j++)
+        {
+            if(adc_value[i][j] > max_value)
+            {
+                max_value = adc_value[i][j];
+            }
+            if(adc_value[i][j] < min_value)
+            {
+                min_value = adc_value[i][j];
+            }
+            adc_value_filter[i] += adc_value[i][j];
+        }
+        adc_value_filter[i] = adc_value_filter[i] - max_value - min_value;
+        adc_value_filter[i] = adc_value_filter[i] / 3;
+
+        max_value = 0;
+        min_value = 4096;
+    }
+}
+
+
+float u_adc_process(int* adc_value)
+{
+    unsigned int adc_value_filter[4] = {0, 0, 0, 0};
+
+    u_adc_filter(adc_value, adc_value_filter);
+
+    float diff = (float)(adc_value_filter[1] - adc_value_filter[2]);
+    float sum = (float)(adc_value_filter[1] + adc_value_filter[2]);
+    float v_diff = (float)(adc_value_filter[0] - adc_value_filter[3]);
+    float v_sum = (float)(adc_value_filter[0] + adc_value_filter[3]);
     float result = 0.0f;
 
     if(sum < MIN_SUM)

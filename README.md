@@ -4,7 +4,7 @@
 
 ...
 
-## future map
+## TODO
 
-- [ ] 合并方向宏定义
-- [ ] 修改中断只置处理标志位 或许会导致数据处理被中断
+- [x] add a filter in adc process
+- [ ] 调整pwm设定方式，传入结构体或者放入config

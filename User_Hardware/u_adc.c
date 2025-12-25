@@ -3,7 +3,7 @@
 #include "zf_adc.h"
 #include "zf_gpio.h"
 
-volatile unsigned int adc_value[4];
+volatile unsigned int adc_value[4][5];
 
 void U_ADC_Init(void)
 {
@@ -29,9 +29,13 @@ void U_ADC_Init(void)
 void U_ADC_Read(void)
 {
     // 这样读取的数据真的能被及时处理吗
+    int i;
 
-    adc_value[0] = adc_once(ADC_P06, ADC_12BIT);
-    adc_value[1] = adc_once(ADC_P11, ADC_12BIT);
-    adc_value[2] = adc_once(ADC_P15, ADC_12BIT);
-    adc_value[3] = adc_once(ADC_P14, ADC_12BIT);
+    for (i = 0; i < 5; i++)
+    {
+        adc_value[0][i] = adc_once(ADC_P06, ADC_12BIT);
+        adc_value[1][i] = adc_once(ADC_P11, ADC_12BIT);
+        adc_value[2][i] = adc_once(ADC_P15, ADC_12BIT);
+        adc_value[3][i] = adc_once(ADC_P14, ADC_12BIT);
+    }
 }
