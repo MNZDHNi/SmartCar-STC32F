@@ -3,10 +3,10 @@
 
 typedef enum {
     STRAIGHT,
-    CURVE,
+    TURN_LEFT,
+    TURN_RIGHT,
     CROSSROAD,
-    GARAGE,
-    RAMP,
+    ROUNDABOUT,
     UNKNOWN
 } TrackType;
 
