@@ -9,12 +9,12 @@
 #include <stdio.h>
 #include "intrins.h"
 #include <math.h>
-//------STC32G SDKµÈ
+//------STC32G SDKï¿½ï¿½
 #include "STC32Gxx.h"
 #include "board.h"
 #include "common.h"
 
-//------Öð·É¿Æ¼¼µ¥Æ¬»úÍâÉèÇý¶¯Í·ÎÄ¼þ
+//------ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½
 #include "zf_uart.h"
 #include "zf_gpio.h"
 #include "zf_iic.h"
@@ -28,9 +28,9 @@
 #include "zf_eeprom.h"
 #include "zf_fifo.h"
 
-// //------Öð·É¿Æ¼¼²úÆ·Çý¶¯Í·ÎÄ¼þ
-// #include "SEEKFREE_FONT.h"
-// #include "SEEKFREE_18TFT.h"
+// //------ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½
+#include "SEEKFREE_FONT.h"
+#include "SEEKFREE_18TFT.h"
 // #include "SEEKFREE_ICM20602.h"
 // #include "SEEKFREE_TSL1401.h"
 // #include "SEEKFREE_IPS114_SPI.h"
@@ -38,7 +38,7 @@
 // #include "SEEKFREE_OLED.h"
 // #include "SEEKFREE_ABSOLUTE_ENCODER.h"
 // #include "SEEKFREE_WIRELESS.h"
-// #include "SEEKFREE_FUNCTION.h"
+#include "SEEKFREE_FUNCTION.h"
 // #include "SEEKFREE_AT24C02.h"
 // #include "SEEKFREE_BLUETOOTH_CH9141.h"
 // #include "SEEKFREE_CONFIG.h"
@@ -49,7 +49,7 @@
 // #include "SEEKFREE_IPS200_SPI.h"
 // #include "SEEKFREE_BLE6A20.h"
 
-// //------Öð·É¿Æ¼¼×é¼þ²ãÍ·ÎÄ¼þ
+// //------ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½
 // #include "seekfree_assistant.h"
 
 

@@ -11,4 +11,6 @@
 #define MIN_SUM 0.0f
 #define V_WEIGHT 0.3f
 
+float u_adc_process(unsigned int (*adc_value)[5]);
+
 #endif
