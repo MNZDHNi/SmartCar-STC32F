@@ -23,7 +23,7 @@ void main()
 	pit_timer_ms(TIM_1, 10);	// 初始化定时器1，10ms中断一次
 	// U_PWM_SetDuty(1000, 1000);
 
-
+	
 	while(1)
 	{
 		// 测试adc
