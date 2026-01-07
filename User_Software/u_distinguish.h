@@ -12,5 +12,6 @@ typedef enum {
 } TrackType;
 
 extern char trace_flag;
+void distinguish_path(void);
 
 #endif

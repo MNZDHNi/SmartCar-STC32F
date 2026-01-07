@@ -6,5 +6,7 @@
 #include "u_pwm.h"
 
 #include "u_adc_process.h"
+#include "u_pid.h"
+#include "u_distinguish.h"
 
 #endif
