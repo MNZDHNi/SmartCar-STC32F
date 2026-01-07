@@ -1,10 +1,10 @@
 #include "u_adc_process.h"
 
-void u_adc_filter(unsigned int (*adc_value)[5], unsigned* adc_value_filter)
+void u_adc_filter(float (*adc_value)[5], float* adc_value_filter)
 {
     int i, j;
-    unsigned int max_value = 0;
-    unsigned int min_value = 4096;
+    float max_value = 0;
+    float min_value = 100;
     for(i = 0; i < 4; i++)
     {
         for(j = 0; j < 5; j++)
@@ -25,14 +25,14 @@ void u_adc_filter(unsigned int (*adc_value)[5], unsigned* adc_value_filter)
         adc_value_filter[i] = adc_value_filter[i] / 3;
 
         max_value = 0;
-        min_value = 4096;
+        min_value = 100;
     }
 }
 
 
-float u_adc_process(unsigned int (*adc_value)[5])
+float u_adc_process(float (*adc_value)[5])
 {
-    unsigned int adc_value_filter[4] = {0, 0, 0, 0};
+    float adc_value_filter[4] = {0, 0, 0, 0};
     float diff, sum, v_diff, v_sum, result;
 
     u_adc_filter(adc_value, adc_value_filter);

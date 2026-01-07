@@ -25,3 +25,14 @@ unsigned int List_5_Read(List_5* list) {
     }
     return list->arr[i];
 }
+
+unsigned int List_5_Average(List_5 *list)
+{
+    int i;
+    unsigned int sum = 0;
+    for(i = 0; i < 5; i++)
+    {
+        sum += list->arr[i];
+    }
+    return sum / 5;
+}

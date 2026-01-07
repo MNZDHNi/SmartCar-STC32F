@@ -4,7 +4,7 @@
 #include "zf_adc.h"
 #include "zf_gpio.h"
 
-volatile unsigned int adc_value[4][5];
+volatile float adc_value[4][5];
 int MAX_default = 100;
 List_5 list;
 
@@ -31,14 +31,38 @@ void U_ADC_Init(void)
     List_5_Init(&list);
 }
 
-void ADC_get_MAX(ADCN_enum adcn)
+unsigned int ADC_get_MAX(ADCN_enum adcn)
 {
-    adc_once(ADCN_enum adcn, ADC_12BIT);
+    unsigned int adc_value = 0;
+    char cnt = 0;
+    unsigned int sum = 0;
+
+    adc_value = adc_once(ADCN_enum adcn, ADC_12BIT);
+
+    if(adc_value > MAX_default)
+    {
+        List_5_Append(&list, adc_value);
+        cnt++;
+        if(cnt >= 5)
+        {
+            MAX_default = List_5_Average(&list);
+            cnt = 0;
+        }
+    }
+    if(MAX_default > 4095)
+    {
+        MAX_default = 4095;
+    }
+    return adc_value;
 }
 
-void ADC_to_one()
+float ADC_to_one(ADC_enum adcn)
 {
+    float adc_value = 0;
 
+    adc_value = ADC_get_MAX(adcn);
+    adc_value = (adc_value / MAX_default) * 100.0;
+    return adc_value;
 }
 
 void U_ADC_Read(void)
@@ -48,11 +72,9 @@ void U_ADC_Read(void)
 
     for (i = 0; i < 5; i++)
     {
-        adc_value[0][i] = adc_once(ADC_P06, ADC_12BIT);
-        adc_value[1][i] = adc_once(ADC_P11, ADC_12BIT);
-        adc_value[2][i] = adc_once(ADC_P15, ADC_12BIT);
-        adc_value[3][i] = adc_once(ADC_P14, ADC_12BIT);
+        adc_value[0][i] = ADC_to_one(ADC_P06);
+        adc_value[1][i] = ADC_to_one(ADC_P11);
+        adc_value[2][i] = ADC_to_one(ADC_P15);
+        adc_value[3][i] = ADC_to_one(ADC_P14);
     }
-
-    // 对数据归一化后放入adc_value数组前
 }

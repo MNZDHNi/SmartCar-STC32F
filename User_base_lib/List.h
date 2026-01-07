@@ -9,5 +9,6 @@ typedef struct {
 void List_5_Init(List_5* list);
 void List_5_Append(List_5* list, unsigned int value);
 unsigned int List_5_Read(List_5* list);
+unsigned int List_5_Average(List_5* list);
 
 #endif
