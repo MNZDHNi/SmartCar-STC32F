@@ -21,6 +21,9 @@
 !Libraries/seekfree_libraries/*
 !Libraries/seekfree_peripheral/*
 
+!User_base_lib/
+!User_base_lib/*
+
 !User_Hardware/
 !User_Hardware/*
 
