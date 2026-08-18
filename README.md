@@ -16,6 +16,11 @@ It is a bad message.
 Now,I want to continue write!  
 I have 3 days to finish.
 
+8/18
+
+But we don't finish this work.  
+It's a bed ending.
+
 ---
 
 ## TODO
